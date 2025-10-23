@@ -1,66 +1,192 @@
-
-body {
-  font-family: 'Times New Roman', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#div-conteiner{
-    height: 600px;
-    width: 900px;
-    border: 1px solid gray;
-    border-radius: 10px;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+#contenido {
+  width: 100%;
+  height: 100%;
+  background-image: url("fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  width: 80vmin; 
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.center {
+  position: absolute;
+  font-size: clamp(2rem, 4vmin, 3rem);
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 12px rgba(255, 182, 193, 0.8); 
+}
+
+.box {
+  width: 18vw;
+  height: 12vw;
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 1em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vmin;
+  overflow: hidden;
+}
+
+.box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vmin;
+  width: 100%;
+  height: 100%;
+  max-width: 90%;
+}
+
+.box-text {
+  font-size: clamp(1rem, 2vmin, 1.3rem);
+  line-height: 1.2;
+  text-align: center;
+  color: #111;
+  flex: 1 1 auto;
+  word-break: break-word;
+}
+
+.box-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vmin, 1rem);
+  padding: 0.6em 1em;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.7);
+  color: #111;
+  backdrop-filter: blur(4px);
+  border: 0.12em solid rgba(0,0,0,0.1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.green  { background: #a8cba3; transform: rotate(0deg)    translate(40vmin) rotate(0deg); }
+.blue   { background: #6ec5d4; transform: rotate(60deg)   translate(40vmin) rotate(-60deg); }
+.yellow { background: #f3d88a; transform: rotate(120deg)  translate(40vmin) rotate(-120deg); }
+.red    { background: #f28b82; transform: rotate(180deg)  translate(40vmin) rotate(-180deg); }
+.orange { background: #f4a261; transform: rotate(240deg)  translate(40vmin) rotate(-240deg); }
+.pink   { background: #f4a4d0; transform: rotate(300deg)  translate(40vmin) rotate(-300deg); }
+
+@media (min-aspect-ratio: 1/1) {
+  .green  { margin-left: 15vw; }
+  .blue   { margin-left: 10vw; }
+  .yellow { margin-right: 10vw; }
+  .red    { margin-right: 15vw; }
+  .orange { margin-right: 10vw; }
+  .pink   { margin-left: 10vw; }
+
+  .box-content {
+    flex-direction: column; 
+  }
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+  html, body {
+    overflow-y: auto; 
+  }
+
+  #contenido {
+    justify-content: flex-start;
+    padding: 2em 0;
+  }
+
+  .circle {
+    position: static;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    align-items: center;
+    gap: 1em;
+  }
 
+  .center {
+    position: static;
+    font-size: 8vw;
+    margin: 1em 0;
+  }
+
+  .box {
+    position: static;
+    width: 70%;
+    max-width: 300px;
+    aspect-ratio: 16 / 11;
+    transform: none;
+  }
+
+  .box-content {
+    flex-direction: row; 
+  }
+
+  .box-text {
+    text-align: center;
+  }
 }
 
-#div-superior{
-    background-color: rgb(0, 188, 213);
-    flex: 1;
+.box-img {
+  display: none;
+  max-width: 80%;   
+  max-height: 75%;  
+  border-radius: 0.5em;
+  object-fit: contain;
 }
 
-
-#div-inferior{
-    flex: 4;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-h1{
-    margin-top: 150px;
-}
-
-#imagen{
-    height: 210px;
-    width: 210px;
-    border-radius: 50%;
-    margin-top: 50px;
-    margin-left: 40px;
-    position: absolute;
-    background-color: white;
-    display: flex;
+/* Pantallas horizontales */
+@media (min-aspect-ratio: 1/1) {
+  .box-content {
+    flex-direction: column;   
     justify-content: center;
     align-items: center;
-    
-}
+    gap: 0.1em;   
+  }
 
-img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    
-}
+  .box-text {
+    margin-top: 0.2em;
+  }
 
-button{
-    color: grey;
-    border: 0px solid grey;
-    border-radius: 5px;
-    height: 40px;
-    width: 120px;
-    margin-top: 30px;
-    color: black;
-}
+  .box-btn {
+    margin-bottom: 0.2em;
+  }
 
-h2, h3{
-    color: gray;
+  .box-img {
+    display: block;
+    max-width: 70%;   
+    max-height: 60%;  
+    margin: 0;  
+  }
+
 }
