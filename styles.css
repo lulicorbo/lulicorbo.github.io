@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========================================
+   VARIABLES DE COLORES CATPPUCCIN LATTE
+   (Paleta Formal, Girly y Pastel)
+   ========================================= */
+:root {
+    /* Fondo de Página y Tarjetas */
+    --ctp-base: #eff1f5;       /* Fondo Principal */
+    --ctp-mantle: #e6e9ef;     /* Fondo de Tarjeta Suave */
+    --ctp-crust: #dce0e8;      /* Fondo Secundario Suave */
+
+    /* Texto */
+    --ctp-text: #4c4f69;       /* Texto Principal Formal */
+    --ctp-subtext0: #6c6f85;  /* Texto Secundario */
+
+    /* Acentuación "Girly" y Pastel */
+    --ctp-pink: #ea76cb;       /* Formal Girly Accent (Sarah Hero/Iconos) */
+    --ctp-mauve: #8839ef;      /* Formal Accent */
+    --ctp-lavender: #7287fd;   /* Headlines de Sección */
+    --ctp-peach: #fe640b;      /* Highlights de Workflow */
+    --ctp-sky: #04a5e5;        /* Tag UI/UX */
+    --ctp-green: #40a02b;      /* Tag Python */
+    --ctp-maroon: #e64553;     /* Iconos Sociales */
+
+    /* Elementos Estructurales */
+    --ctp-overlay0: #9ca0b0;   /* Líneas de Cuadrícula / Bordes */
+    --ctp-surface0: #ccd0da;   /* Bordes de Tarjeta */
+}
+
+/* =========================================
+   ESTILOS BÁSICOS Y RESETEO
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Desplazamiento suave entre secciones */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* =========================================
+   ESTILOS DE BARRA DE NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: var(--ctp-mantle);
+    border-bottom: 1px solid var(--ctp-surface0);
+    padding: 15px 0;
+    position: sticky; /* Se queda pegada arriba */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--ctp-pink);
+}
+
+/* =========================================
+   DISEÑO PRINCIPAL (Layout Responsivo)
+   ========================================= */
+.main-layout {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.left-column {
+    flex: 2; /* Ocupa 2 partes del ancho */
+}
+
+.right-column {
+    flex: 1; /* Ocupa 1 parte del ancho */
+}
+
+/* =========================================
+   ESTILOS DE COMPONENTES DE TARJETA (Cards)
+   ========================================= */
+.hero-section, .workflow-section, .project-card, .automation-card {
+    background-color: var(--ctp-mantle);
+    border: 1px solid var(--ctp-surface0);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+/* =========================================
+   ESTILOS DE SECCIÓN DE HÉROE (Sarah Profile)
+   ========================================= */
+.hero-section {
+    display: flex;
+    align-items: start;
+    padding: 30px;
+    gap: 30px;
+    border: none; /* Quitamos borde para que se fusione */
+    background: none;
+}
+
+.profile-card {
+    border: 1px solid var(--ctp-pink); /* Bordes suaves rosas */
+    background-color: var(--ctp-mantle);
+    padding: 10px;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-text-card {
+    background-color: var(--ctp-mantle);
+    border: 1px solid var(--ctp-surface0);
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1.5;
+}
+
+.hero-text-card h1 {
+    font-size: 1.6rem;
+    color: var(--ctp-pink);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-text-card p {
+    font-size: 0.95rem;
+    color: var(--ctp-subtext0);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.about-me-title {
+    color: var(--ctp-pink);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   ESTILOS DE SECCIÓN DE PROYECTOS
+   ========================================= */
+.section-headline {
+    background-color: var(--ctp-lavender);
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.headline-dark {
+    background-color: var(--ctp-lavender);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--ctp-overlay0);
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 0.85rem;
+    color: var(--ctp-subtext0);
+    margin-bottom: 15px;
+    font-weight: 300;
+    flex-grow: 1; /* Empuja los tags abajo */
+}
+
+.tag-container {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: var(--ctp-crust);
+}
+
+.tag-react { color: var(--ctp-pink); background-color: rgba(234, 118, 203, 0.15); }
+.tag-python { color: var(--ctp-green); background-color: rgba(64, 160, 43, 0.15); }
+.tag-uiux { color: var(--ctp-sky); background-color: rgba(4, 165, 229, 0.15); }
+
+/* =========================================
+   ESTILOS DE WORKFLOW Y BARRA LATERAL
+   ========================================= */
+.workflow-section {
+    padding: 30px;
+}
+
+.workflow-card {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    border: none;
+    background: none;
+}
+
+.workflow-icon {
+    font-size: 2.5rem;
+    color: var(--ctp-peach);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.workflow-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.workflow-content ul, .automation-card ul {
+    font-size: 0.9rem;
+    color: var(--ctp-subtext0);
+    font-weight: 300;
+}
+
+.workflow-content li::before, .automation-card li::before {
+    content: "•";
+    color: var(--ctp-pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.workflow-content li, .automation-card li {
+    margin-bottom: 8px;
+    padding-left: 1em;
+}
+
+.automation-card {
+    padding: 25px;
+}
+
+.automation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.automation-icon {
+    width: 60px;
+    height: auto;
+}
+
+/* =========================================
+   ESTILOS DE SECCIÓN DE YOGA (Imagen de Fondo)
+   ========================================= */
+.yoga-section {
+    width: 100%;
+    /* SUSTITUYE POR TU IMAGEN DE FONDO REAL */
+    background-image: linear-gradient(rgba(239, 241, 245, 0.8), rgba(239, 241, 245, 0.9)), url('https://via.placeholder.com/1600x600/CCD0DA/7287FD?text=Imagen+Yoga');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax suave */
+    padding: 80px 0;
+}
+
+.yoga-container {
+    display: flex;
+    justify-content: flex-end; /* Empuja el cuadro de texto a la derecha */
+}
+
+.yoga-text-box {
+    background-color: rgba(230, 233, 239, 0.95); /* Mantle ligeramente transparente */
+    border: 1px solid var(--ctp-surface0);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 450px;
+}
+
+.yoga-text-box h2 {
+    color: var(--ctp-text);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.yoga-text-box p {
+    color: var(--ctp-subtext0);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* =========================================
+   ESTILOS DE GALERÍA DE ARTE
+   ========================================= */
+.art-section {
+    padding: 60px 0;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en PC */
+    gap: 15px;
+}
+
+.art-item {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--ctp-overlay0);
+    background-color: var(--ctp-mantle);
+}
+
+/* =========================================
+   ESTILOS DE PIE DE PÁGINA (Footer)
+   ========================================= */
+footer {
+    background-color: var(--ctp-crust);
+    border-top: 1px solid var(--ctp-surface0);
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--ctp-subtext0);
+    font-weight: 300;
+}
+
+.footer-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ctp-text);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px); /* Pequeño salto al hover */
+}
+
+.social-links .fa-x-twitter { color: var(--ctp-pink); }
+.social-links .fa-github { color: var(--ctp-pink); }
+.social-links .fa-instagram { color: var(--ctp-maroon); }
+.social-links .fa-youtube { color: var(--ctp-maroon); }
+
+/* =========================================
+   MEDIA QUERIES - DISEÑO RESPONSIVO
+   ========================================= */
+
+/* DISPOSITIVOS MEDIANOS (Tablets, Pantallas pequeñas - hasta 992px) */
+@media (max-width: 992px) {
+    /* Main layout pasa a una sola columna */
+    .main-layout {
+        flex-direction: column;
+    }
+
+    /* Columna de héroe pasa a una sola columna */
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-text-card {
+        padding: 20px;
+    }
+
+    /* Cuadrícula de proyectos pasa a 2 columnas */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Galería de arte pasa a 3 columnas */
+    .art-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* DISPOSITIVOS PEQUEÑOS (Móviles - hasta 600px) */
+@media (max-width: 600px) {
+    /* Navbar compacta */
+    nav ul {
+        gap: 15px;
+    }
+    nav a {
+        font-size: 0.75rem;
+    }
+
+    /* Cuadrícula de proyectos pasa a 1 columna */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galería de arte pasa a 2 columnas */
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sección de yoga: el texto ocupa todo el ancho */
+    .yoga-container {
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    /* Footer pasa a una columna */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

@@ -1,65 +1,182 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucía Corbo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional Girly - Catppuccin Latte</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a fuentes profesionales (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome para redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <main id="contenido"> 
-   <div class="circle">
-    <h1 class="center">LUCÍA CORBO</h1>
 
-    <div class="box green">
-        <div class="box-content">
-        <p class="box-text">QUIÉN SOY</p>
-        <img src="quien-soy.png" alt="Imagen Quién Soy" class="box-img">
-        <a href="#" class="box-btn">VER</a>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">portfolio.morko</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                    <li><a href="#proyectos">PORTAFOLIO</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="box blue">
-        <div class="box-content">
-        <p class="box-text">PROYECTOS PYTHON</p>
-        <img src="proyectos-python.png" alt="Imagen Proyectos Python" class="box-img">
-        <a href="#" class="box-btn">VER</a>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container main-layout">
+
+        <!-- COLUMNA IZQUIERDA (Perfil y Proyectos) -->
+        <div class="left-column">
+            
+            <!-- Sección de Héroe/Perfil -->
+            <section id="inicio" class="hero-section">
+                <div class="profile-card">
+                    <!-- SUSTITUYE ESTA IMAGEN POR TU FOTO DE PERFIL -->
+                    <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Tu+Foto" alt="Sarah - Creative Developer" class="profile-img">
+                </div>
+                <div class="hero-text-card">
+                    <h1>HOLA, SOY SARAH.<br>CREATIVE DEVELOPER & MINDFULNESS ADVOCATE.</h1>
+                    <p>Soy Sarah, una desarrolladora creativa y defensora del mindfulness. Mi enfoque profesional combina soluciones técnicas innovadoras con estrategias de bienestar, creando experiencias digitales equilibradas y centradas en el usuario.</p>
+                    <h2 class="about-me-title">SOBRE MÍ</h2>
+                </div>
+            </section>
+
+            <!-- Sección de Proyectos de Programación -->
+            <section id="proyectos" class="projects-section">
+                <h2 class="section-headline">PROYECTOS DE PROGRAMACIÓN</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Proyecto 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <!-- SUSTITUYE POR CAPTURA DE TU PROYECTO -->
+                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+1" alt="Web App: Community Connect">
+                        </div>
+                        <h3>Web App: Community Connect</h3>
+                        <p>Lorem ipsum dolor sit emart, rend concertaity roonorms on the Web App.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-react">React</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-uiux">UI/UX</span>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+2" alt="Plantilla de Portafolio">
+                        </div>
+                        <h3>Plantilla de Portafolio</h3>
+                        <p>Farnovetion teaserisense to core Web App-reonome clearuptions.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-react">React</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-uiux">UI/UX</span>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+3" alt="Plantilla de Portafolio Formal">
+                        </div>
+                        <h3>Plantilla de Portafolio</h3>
+                        <p>Design your professional services core and portfolia template.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-react">React</span>
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-uiux">UI/UX</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección de Herramientas de Eficiencia -->
+            <section id="workflow" class="workflow-section">
+                <div class="workflow-card">
+                    <div class="workflow-icon">
+                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="workflow-content">
+                        <h3>Workflow Efficiency Tools</h3>
+                        <ul>
+                            <li>Soluciones de Automatización completadas.</li>
+                            <li>Implementación de soluciones y wwmantor automation.</li>
+                            <li>Automatización editorial implementada.</li>
+                            <li>Solutioners implementados con soluciones de automatización.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
 
-    <div class="box yellow">
-        <div class="box-content">
-        <p class="box-text">PROYECTOS MÓVILES</p>
-        <img src="proyectos-moviles.png" alt="Imagen Proyectos Móviles" class="box-img">
-        <a href="#" class="box-btn">VER</a>
+        <!-- COLUMNA DERECHA (Barra Lateral de Automatización) -->
+        <aside class="right-column">
+            <section id="automatizacion" class="automation-sidebar">
+                <h2 class="section-headline headline-dark">AUTOMATIONS</h2>
+                <div class="automation-card">
+                    <div class="automation-header">
+                        <h3>Workflow Efficiency Tools</h3>
+                        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cellipse cx='50' cy='50' rx='40' ry='30' fill='%23ea76cb' fill-opacity='0.2'/%3E%3Ccircle cx='40' cy='45' r='5' fill='%23ea76cb'/%3E%3Ccircle cx='60' cy='45' r='5' fill='%23ea76cb'/%3E%3Cpath d='M 35 65 q 15 15 30 0' fill='none' stroke='%23ea76cb' stroke-width='3'/%3E%3Crect x='45' y='15' width='10' height='20' rx='2' fill='%23ea76cb'/%3E%3C/svg%3E" alt="Robot Icon" class="automation-icon">
+                    </div>
+                    <ul>
+                        <li>Implementación de soluciones de automatización, optimizando flujos de trabajo.</li>
+                        <li>Implementación de soportes arril y servicios para prevenir fraudes.</li>
+                        <li>Automatización editorial implementada.</li>
+                        <li>Solutioners implementados con soluciones de automatización.</li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+
+    </main>
+
+    <!-- SECCIÓN DE YOGA (Ancho Completo con Imagen de Fondo) -->
+    <section id="sobre-mi" class="yoga-section">
+        <div class="container yoga-container">
+            <div class="yoga-text-box">
+                <h2>YOGA & MINDFULNESS</h2>
+                <p>La práctica del Yoga informa mi núcleo de servicios profesionales, aportando un enfoque equilibrado y centrado en la atención plena a cada proyecto de desarrollo.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="box red">
-        <div class="box-content">
-        <p class="box-text">PROYECTOS ANGULAR</p>
-        <img src="proyectos-angular.png" alt="Imagen Proyectos Angular" class="box-img">
-        <a href="#" class="box-btn">VER</a>
+    <!-- SECCIÓN DE GALERÍA DE ARTE -->
+    <section id="arte" class="container art-section">
+        <h2 class="section-headline headline-dark">ART GALLERY</h2>
+        <div class="art-grid">
+            <!-- SUSTITUYE ESTAS IMÁGENES POR TU ARTE -->
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+1" alt="Arte de Sarah 1" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+2" alt="Arte de Sarah 2" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+3" alt="Arte de Sarah 3" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+4" alt="Arte de Sarah 4" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+5" alt="Arte de Sarah 5" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+6" alt="Arte de Sarah 6" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+7" alt="Arte de Sarah 7" class="art-item">
+            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+8" alt="Arte de Sarah 8" class="art-item">
         </div>
-    </div>
+    </section>
 
-    <div class="box orange">
-        <div class="box-content">
-        <p class="box-text">MI CV</p>
-        <img src="mi-cv.png" alt="Imagen CV" class="box-img">
-        <a href="#" class="box-btn">VER</a>
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <div class="container footer-container">
+            <p class="footer-logo">portafolio.morko</p>
+            <p class="contact-info">Contacto: 10: 123-6789 | sahaln@yggapomne.com</p>
+            <nav class="social-links">
+                <a href="#" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+            </nav>
         </div>
-    </div>
+    </footer>
 
-    <div class="box pink">
-        <div class="box-content">
-        <p class="box-text">MI GITHUB</p>
-        <img src="mi-github.png" alt="Imagen GitHub" class="box-img">
-        <a href="#" class="box-btn">VER</a>
-        </div>
-    </div>
-    </div>
-
-
-  </main>
 </body>
 </html>
