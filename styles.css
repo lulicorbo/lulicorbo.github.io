@@ -90,7 +90,7 @@ header {
 .logo {
     font-size: 1.1rem;
     font-weight: 700;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
 }
 
 nav ul {
