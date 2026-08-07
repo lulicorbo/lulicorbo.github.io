@@ -1,39 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* =========================================
-   VARIABLES DE COLORES CATPPUCCIN LATTE
-   (Paleta Formal, Girly y Pastel)
-   ========================================= */
+/* ================= VARIABLES Y RESET ================= */
 :root {
-    /* Fondo de Página y Tarjetas */
-    --ctp-base: #eff1f5;       /* Fondo Principal */
-    --ctp-mantle: #e6e9ef;     /* Fondo de Tarjeta Suave */
-    --ctp-crust: #dce0e8;      /* Fondo Secundario Suave */
-
-    /* Texto */
-    --ctp-text: #4c4f69;       /* Texto Principal Formal */
-    --ctp-subtext0: #6c6f85;  /* Texto Secundario */
-
-    /* Acentuación "Girly" y Pastel */
-    --ctp-pink: #ea76cb;       /* Formal Girly Accent (Sarah Hero/Iconos) */
-    --ctp-mauve: #8839ef;      /* Formal Accent */
-    --ctp-lavender: #7287fd;   /* Headlines de Sección */
-    --ctp-peach: #fe640b;      /* Highlights de Workflow */
-    --ctp-sky: #04a5e5;        /* Tag UI/UX */
-    --ctp-green: #40a02b;      /* Tag Python */
-    --ctp-maroon: #e64553;     /* Iconos Sociales */
-
-    /* Elementos Estructurales */
-    --ctp-overlay0: #9ca0b0;   /* Líneas de Cuadrícula / Bordes */
-    --ctp-surface0: #ccd0da;   /* Bordes de Tarjeta */
+    --color-primary: #aca5e8;      /* Morado/lila principal */
+    --color-secondary: #89b4fa;    /* Azul claro (reemplaza a primary-light) */
+    --color-bg-light: #e6e3f8;     /* Beige/Gris cálido de fondo */
+    --color-rosa-pastel: #f5c2e7;  /* Rosa suave para el contenedor Sobre Mí */
+    --color-text-dark: #2d2d2d;    /* Texto oscuro */
+    --color-tag-yellow: #fde047;   /* Amarillo para etiquetas */
+    
+    --font-logo: 'Pacifico', cursive;
+    --font-body: 'Nunito', sans-serif;
 }
 
-/* =========================================
-   ESTILOS BÁSICOS Y RESETEO
-   ========================================= */
+/* ================= FIX DESPLAZAMIENTO SUAVE Y MENÚ FIJO ================= */
+html {
+    scroll-behavior: smooth; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,451 +23,592 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--ctp-base);
-    color: var(--ctp-text);
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
     line-height: 1.6;
-    scroll-behavior: smooth; /* Desplazamiento suave entre secciones */
+    overflow-x: hidden;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+section {
+    scroll-margin-top: 85px; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease;
 }
 
-ul {
-    list-style: none;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-/* =========================================
-   ESTILOS DE BARRA DE NAVEGACIÓN
-   ========================================= */
-header {
-    background-color: var(--ctp-mantle);
-    border-bottom: 1px solid var(--ctp-surface0);
+.section-subtitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.navbar {
+    background-color: var(--color-primary);
+    color: white;
     padding: 15px 0;
-    position: sticky; /* Se queda pegada arriba */
+    position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 1.1rem;
+    font-family: var(--font-logo);
+    font-size: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
     font-weight: 700;
-    /*text-transform: lowercase;*/
 }
 
-nav ul {
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* ================= SECCIÓN: SOBRE MÍ ================= */
+.section-sobre-mi {
+    padding: 4rem 0;
+}
+
+.contenedor-rosa {
+    background-color: var(--color-rosa-pastel);
+    border-radius: 30px;
+    padding: 40px;
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-nav a {
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.hero-image {
+    flex: 0 0 300px;
 }
 
-nav a:hover {
-    color: var(--ctp-pink);
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 6px solid white; /* Marco blanco a la foto */
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
 }
 
-/* =========================================
-   DISEÑO PRINCIPAL (Layout Responsivo)
-   ========================================= */
-.main-layout {
-    display: flex;
-    gap: 30px;
-    padding: 40px 0;
-}
-
-.left-column {
-    flex: 2; /* Ocupa 2 partes del ancho */
-}
-
-.right-column {
-    flex: 1; /* Ocupa 1 parte del ancho */
-}
-
-/* =========================================
-   ESTILOS DE COMPONENTES DE TARJETA (Cards)
-   ========================================= */
-.hero-section, .workflow-section, .project-card, .automation-card {
-    background-color: var(--ctp-mantle);
-    border: 1px solid var(--ctp-surface0);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-    margin-bottom: 25px;
-    overflow: hidden;
-}
-
-/* =========================================
-   ESTILOS DE SECCIÓN DE HÉROE (Sarah Profile)
-   ========================================= */
-.hero-section {
-    display: flex;
-    align-items: start;
-    padding: 30px;
-    gap: 30px;
-    border: none; /* Quitamos borde para que se fusione */
-    background: none;
-}
-
-.profile-card {
-    border: 1px solid var(--ctp-pink); /* Bordes suaves rosas */
-    background-color: var(--ctp-mantle);
-    padding: 10px;
-    border-radius: 15px;
+.hero-text {
     flex: 1;
 }
 
-.profile-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.hero-text-card {
-    background-color: var(--ctp-mantle);
-    border: 1px solid var(--ctp-surface0);
-    padding: 30px;
-    border-radius: 12px;
-    flex: 1.5;
-}
-
-.hero-text-card h1 {
-    font-size: 1.6rem;
-    color: var(--ctp-pink);
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-
-.hero-text-card p {
-    font-size: 0.95rem;
-    color: var(--ctp-subtext0);
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.about-me-title {
-    color: var(--ctp-pink);
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* =========================================
-   ESTILOS DE SECCIÓN DE PROYECTOS
-   ========================================= */
-.section-headline {
-    background-color: var(--ctp-lavender);
-    color: #fff;
+.hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
     text-align: center;
-    padding: 12px 0;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
 }
 
-.headline-dark {
-    background-color: var(--ctp-lavender);
+.hero-text p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
 }
 
-.projects-grid {
+/* ================= GRIDS GENERALES ================= */
+.grid-3-cols {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-.project-card {
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ================= SECCIÓN: EDUCACIÓN ================= */
+.section-educacion {
+    padding-bottom: 4rem;
+}
+
+.edu-intro-container {
+    margin-bottom: 4rem;
+}
+
+.edu-card {
+    background-color: var(--color-secondary); /* Usa el azul claro */
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.flex-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.edu-logo {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 15px;
+}
+
+
+.edu-info {
+    flex: 1;
+}
+
+.edu-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.edu-institution {
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* --- Historia Camino --- */
+.historia-camino {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.historia-camino h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.historia-camino p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* --- Proyectos --- */
+.proyectos-wrapper {
+    position: relative;
+    background: linear-gradient(
+        to bottom, 
+        transparent 25%, 
+        var(--color-primary) 25%, 
+        var(--color-primary) 70%, 
+        transparent 70%
+    );
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-proyecto {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
-.project-image img {
+.card-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.card-proyecto img {
     width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid var(--ctp-overlay0);
-    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
 }
 
-.project-card h3 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-.project-card p {
-    font-size: 0.85rem;
-    color: var(--ctp-subtext0);
-    margin-bottom: 15px;
-    font-weight: 300;
-    flex-grow: 1; /* Empuja los tags abajo */
-}
-
-.tag-container {
+.card-content {
+    padding: 20px;
     display: flex;
-    gap: 8px;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 .tag {
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: var(--ctp-crust);
-}
-
-.tag-react { color: var(--ctp-pink); background-color: rgba(234, 118, 203, 0.15); }
-.tag-python { color: var(--ctp-green); background-color: rgba(64, 160, 43, 0.15); }
-.tag-uiux { color: var(--ctp-sky); background-color: rgba(4, 165, 229, 0.15); }
-
-/* =========================================
-   ESTILOS DE WORKFLOW Y BARRA LATERAL
-   ========================================= */
-.workflow-section {
-    padding: 30px;
-}
-
-.workflow-card {
-    display: flex;
-    gap: 30px;
-    align-items: start;
-    border: none;
-    background: none;
-}
-
-.workflow-icon {
-    font-size: 2.5rem;
-    color: var(--ctp-peach);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.workflow-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-}
-
-.workflow-content ul, .automation-card ul {
-    font-size: 0.9rem;
-    color: var(--ctp-subtext0);
-    font-weight: 300;
-}
-
-.workflow-content li::before, .automation-card li::before {
-    content: "•";
-    color: var(--ctp-pink);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-.workflow-content li, .automation-card li {
-    margin-bottom: 8px;
-    padding-left: 1em;
-}
-
-.automation-card {
-    padding: 25px;
-}
-
-.automation-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.automation-icon {
-    width: 60px;
-    height: auto;
-}
-
-/* =========================================
-   ESTILOS DE SECCIÓN DE YOGA (Imagen de Fondo)
-   ========================================= */
-.yoga-section {
-    width: 100%;
-    /* SUSTITUYE POR TU IMAGEN DE FONDO REAL */
-    background-image: linear-gradient(rgba(239, 241, 245, 0.8), rgba(239, 241, 245, 0.9)), url('https://via.placeholder.com/1600x600/CCD0DA/7287FD?text=Imagen+Yoga');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Efecto Parallax suave */
-    padding: 80px 0;
-}
-
-.yoga-container {
-    display: flex;
-    justify-content: flex-end; /* Empuja el cuadro de texto a la derecha */
-}
-
-.yoga-text-box {
-    background-color: rgba(230, 233, 239, 0.95); /* Mantle ligeramente transparente */
-    border: 1px solid var(--ctp-surface0);
-    border-radius: 12px;
-    padding: 40px;
-    max-width: 450px;
-}
-
-.yoga-text-box h2 {
-    color: var(--ctp-text);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.yoga-text-box p {
-    color: var(--ctp-subtext0);
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-/* =========================================
-   ESTILOS DE GALERÍA DE ARTE
-   ========================================= */
-.art-section {
-    padding: 60px 0;
-}
-
-.art-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en PC */
-    gap: 15px;
-}
-
-.art-item {
-    width: 100%;
-    height: auto;
+    background-color: var(--color-tag-yellow);
+    color: black;
+    font-weight: 800;
+    padding: 4px 12px;
     border-radius: 8px;
-    border: 1px solid var(--ctp-overlay0);
-    background-color: var(--ctp-mantle);
+    font-size: 0.9rem;
 }
 
-/* =========================================
-   ESTILOS DE PIE DE PÁGINA (Footer)
-   ========================================= */
-footer {
-    background-color: var(--ctp-crust);
-    border-top: 1px solid var(--ctp-surface0);
-    padding: 40px 0;
+/* --- Certificaciones (Carrusel) --- */
+.certificaciones-wrapper {
+    padding: 2rem 0;
+}
+
+.carousel-certificaciones {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 0 20px 0;
+}
+
+/* Estilo para la barra de desplazamiento del carrusel */
+.carousel-certificaciones::-webkit-scrollbar {
+    height: 10px;
+}
+.carousel-certificaciones::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+.carousel-certificaciones::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.cert-card {
+    scroll-snap-align: start;
+    min-width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex: 0 0 auto;
+}
+
+.cert-img-container {
+    height: 160px; /* Altura fija para que todas las tarjetas midan lo mismo */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Evita que la imagen se estire o se deforme */
+    border-radius: 8px; /* Un borde redondeado sutil si la imagen tiene fondo */
+}
+
+.cert-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.cert-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ================= SECCIÓN: AUTOMATIZACIONES ================= */
+.section-automatizaciones {
+    padding-bottom: 4rem;
+}
+
+.section-automatizaciones .grid-2-cols {
+    gap: 24px;
+    align-items: stretch;
+}
+
+.card-auto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 15px;
+    padding: 25px;
+    transition: box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card-auto:hover {
+    box-shadow: 0 8px 25px rgba(172, 165, 232, 0.4); 
+}
+
+.auto-icon {
+    font-size: 3rem;
+    flex: 0 0 auto;
+}
+
+.auto-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.auto-content p {
+    font-size: 0.95rem;
+}
+
+/* ================= SECCIÓN: VOLUNTARIADO ================= */
+.section-voluntariado {
+    background-color: var(--color-primary);
+    padding: 3rem 0;
+    color: var(--color-text-dark);
+}
+
+.section-voluntariado .section-title {
+    color: var(--color-text-dark);
+}
+
+.voluntariado-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 3rem;
+}
+
+.voluntariado-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.vol-image {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 61% 10%, 75% 6%, 81% 20%, 95% 23%, 92% 37%, 100% 50%, 92% 63%, 95% 77%, 81% 80%, 75% 94%, 61% 90%, 50% 100%, 39% 90%, 25% 94%, 19% 80%, 5% 77%, 8% 63%, 0% 50%, 8% 37%, 5% 23%, 19% 20%, 25% 6%, 39% 10%);
+    padding: 0;
+    overflow: hidden;
+}
+
+.vol-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vol-text {
+    flex: 1;
+}
+
+.vol-text ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* ================= SECCIÓN: HOBBIES ================= */
+.section-hobbies {
+    background: linear-gradient(to bottom, var(--color-bg-light) 75%, var(--color-primary) 75%);
+    padding-bottom: 2rem;
+}
+
+.polaroid-gallery {
+    align-items: center;
+}
+
+.polaroid {
+    background-color: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.polaroid-text h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.polaroid-text p {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+}
+
+.rotate-left { transform: rotate(-4deg); }
+.rotate-right { transform: rotate(3deg); }
+.rotate-left-alt { transform: rotate(-2deg); }
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.stars-decoration {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.stars-decoration .big { font-size: 3rem; }
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 0;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.85rem;
-    color: var(--ctp-subtext0);
-    font-weight: 300;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-logo {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--ctp-text);
+    font-family: var(--font-logo);
+    font-size: 1.4rem;
 }
 
-.social-links {
+.footer-links {
     display: flex;
-    gap: 15px;
-    font-size: 1.1rem;
+    gap: 40px;
 }
 
-.social-links a:hover {
-    transform: translateY(-3px); /* Pequeño salto al hover */
+.footer-links .columna {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.social-links .fa-x-twitter { color: var(--ctp-pink); }
-.social-links .fa-github { color: var(--ctp-pink); }
-.social-links .fa-instagram { color: var(--ctp-maroon); }
-.social-links .fa-youtube { color: var(--ctp-maroon); }
+.footer-credits {
+    text-align: right;
+}
 
-/* =========================================
-   MEDIA QUERIES - DISEÑO RESPONSIVO
-   ========================================= */
+.footer-credits .emojis {
+    margin-bottom: 5px;
+}
 
-/* DISPOSITIVOS MEDIANOS (Tablets, Pantallas pequeñas - hasta 992px) */
-@media (max-width: 992px) {
-    /* Main layout pasa a una sola columna */
-    .main-layout {
+.codigo-fuente {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+.codigo-fuente:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE (Móviles y Tablets) ================= */
+@media (max-width: 768px) {
+    .nav-container {
         flex-direction: column;
-    }
-
-    /* Columna de héroe pasa a una sola columna */
-    .hero-section {
-        flex-direction: column;
-    }
-
-    .hero-text-card {
-        padding: 20px;
-    }
-
-    /* Cuadrícula de proyectos pasa a 2 columnas */
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Galería de arte pasa a 3 columnas */
-    .art-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* DISPOSITIVOS PEQUEÑOS (Móviles - hasta 600px) */
-@media (max-width: 600px) {
-    /* Navbar compacta */
-    nav ul {
         gap: 15px;
     }
-    nav a {
-        font-size: 0.75rem;
-    }
-
-    /* Cuadrícula de proyectos pasa a 1 columna */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Galería de arte pasa a 2 columnas */
-    .art-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Sección de yoga: el texto ocupa todo el ancho */
-    .yoga-container {
+    
+    .nav-links {
+        flex-wrap: wrap;
         justify-content: center;
-        padding: 0 15px;
+    }
+    
+    .contenedor-rosa {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .hero-image {
+        flex: 0 0 200px; 
+    }
+    
+    .justificado {
+        text-align: left; /* En móviles suele verse mejor alineado a la izquierda */
     }
 
-    /* Footer pasa a una columna */
+    .flex-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .voluntariado-item, 
+    .voluntariado-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .vol-text ul {
+        text-align: left;
+        display: inline-block; 
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
-        gap: 15px;
+    }
+    .footer-links {
+        justify-content: center;
+    }
+    .footer-credits {
+        text-align: center;
     }
 }

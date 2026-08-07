@@ -3,182 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional Girly - Catppuccin Latte</title>
-    <!-- Enlace a la hoja de estilos externa -->
+    <title>Lucia Corbo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/icon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <!-- Enlace a fuentes profesionales (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos de FontAwesome para redes sociales -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header>
+    <!-- ================= MUNU ================= -->
+    <header class="navbar">
         <div class="container nav-container">
-            <div class="logo">LUCIA CORBO</div>
+            <div class="logo">Lucia Corbo 🪷</div>
             <nav>
-                <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#sobre-mi">UN POCO DE MI HISTORIA</a></li>
-                    <li><a href="#proyectos">AUTOMATIZACIONES</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
+                <ul class="nav-links">
+                    <li><a href="#sobre-mi">Sobre Mi</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#automatizaciones">Automatizaciones</a></li>
+                    <li><a href="#voluntariado">Voluntariado</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container main-layout">
-
-        <!-- COLUMNA IZQUIERDA (Perfil y Proyectos) -->
-        <div class="left-column">
-            
-            <!-- Sección de Héroe/Perfil -->
-            <section id="inicio" class="hero-section">
-                <div class="profile-card">
-                    <!-- SUSTITUYE ESTA IMAGEN POR TU FOTO DE PERFIL -->
-                    <img src="imagenes\foto.jpg" alt="Lucía - Creative Developer" class="profile-img">
-                </div>
-                <div class="hero-text-card">
-                    <h1>HOLA, SOY LUCIA 👋<br> Qué lindo que estés por acá.</h1>
-                    <p>Soy Técnica Universitaria en Programación y actualmente trabajo creando e implementando soluciones que simplifican procesos y ayudan a que la tecnología genere un impacto real.</p>
-                    <p>Pero, si algo aprendí en este camino, es que no me gusta encasillarme en una sola cosa.</p>
-                    <p>Además de la programación y automatización, me apasiona crear, aprender y compartir. Me encanta explorar proyectos creativos, experimentar con el arte, enseñar tecnología y acercarla a más personas. Creo profundamente que el conocimiento cobra más valor cuando se comparte.</p>
-                    <p>Este espacio reúne un poco de todo eso: los proyectos que fui desarrollando a lo largo de mi carrera, las herramientas con las que trabajé, los desafíos que enfrenté y también esas otras experiencias que forman parte de quién soy. Porque detrás de cada línea de código hay una persona curiosa, creativa y con ganas de seguir aprendiendo.</p>
-                    <p>Gracias por visitar mi página. Ojalá disfrutes recorriéndola tanto como yo disfruté construyéndola.</p>
-                    <h2 class="about-me-title">TE INVITO A CONECER MÁS SOBRE MÍ Y MIS PROYETOS</h2>
-                </div>
-            </section>
-
-            <!-- Sección de Proyectos de Programación -->
-            <section id="proyectos" class="projects-section">
-                <h2 class="section-headline">PROYECTOS DE PROGRAMACIÓN</h2>
-                <div class="projects-grid">
-                    
-                    <!-- Proyecto 1 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <!-- SUSTITUYE POR CAPTURA DE TU PROYECTO -->
-                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+1" alt="Web App: Community Connect">
-                        </div>
-                        <h3>Web App: Community Connect</h3>
-                        <p>Lorem ipsum dolor sit emart, rend concertaity roonorms on the Web App.</p>
-                        <div class="tag-container">
-                            <span class="tag tag-react">React</span>
-                            <span class="tag tag-python">Python</span>
-                            <span class="tag tag-uiux">UI/UX</span>
-                        </div>
-                    </article>
-
-                    <!-- Proyecto 2 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+2" alt="Plantilla de Portafolio">
-                        </div>
-                        <h3>Plantilla de Portafolio</h3>
-                        <p>Farnovetion teaserisense to core Web App-reonome clearuptions.</p>
-                        <div class="tag-container">
-                            <span class="tag tag-react">React</span>
-                            <span class="tag tag-python">Python</span>
-                            <span class="tag tag-uiux">UI/UX</span>
-                        </div>
-                    </article>
-
-                    <!-- Proyecto 3 -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250/ccd0da/4c4f69?text=Proyecto+3" alt="Plantilla de Portafolio Formal">
-                        </div>
-                        <h3>Plantilla de Portafolio</h3>
-                        <p>Design your professional services core and portfolia template.</p>
-                        <div class="tag-container">
-                            <span class="tag tag-react">React</span>
-                            <span class="tag tag-python">Python</span>
-                            <span class="tag tag-uiux">UI/UX</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Sección de Herramientas de Eficiencia -->
-            <section id="workflow" class="workflow-section">
-                <div class="workflow-card">
-                    <div class="workflow-icon">
-                        <i class="fas fa-lightbulb"></i>
-                        <i class="fas fa-cogs"></i>
+    <main>
+        <!-- ================= SOBRE MÍ ================= -->
+        <section id="sobre-mi" class="section-sobre-mi">
+            <div class="container">
+                <h1 class="hero-title">Hola, soy Lucia. 👋<br>Qué lindo que estés por acá.</h1>
+                <div class="contenedor-rosa"> 
+                    <div class="hero-image">
+                        <img src="imagenes/foto.jpg" alt="Lucia Corbo">
                     </div>
-                    <div class="workflow-content">
-                        <h3>Workflow Efficiency Tools</h3>
+                    <div class="hero-text">
+                        <p class="justificado">Soy Técnica Universitaria en Programación, actualmente trabajo creando soluciones que simplifican procesos y ayuden a generar un impacto real.</p>
+                        <p class="justificado">Si algo aprendí en este camino, es que no me gusta encasillarme en una sola cosa. Además de la programación y automatización, me encanta explorar proyectos creativos, experimentando con el arte y enseñando sobre tecnología para acercarla a más personas. Creo profundamente que el conocimiento cobra más valor cuando se comparte.</p>
+                        <p class="justificado">Gracias por visitar mi página, ojalá disfrutes recorriéndola tanto como yo disfruté construyéndola.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EDUCACIÓN ================= -->
+        <section id="educacion" class="section-educacion">
+            <h2 class="section-title">Educación</h2>
+            
+            <div class="container edu-intro-container">
+                
+                <!-- Tarjeta UTN con Logo -->
+                <div class="edu-card flex-card">
+                    <div class="edu-logo starburst-pequeno">
+                        <img src="imagenes/utn.png" alt="UTN Logo">
+                    </div>
+                    <div class="edu-info">
+                        <h3>🎓 Técnica Universitaria en Programación</h3>
+                        <p class="edu-institution">Universidad Tecnológica Nacional (UTN)</p>
+                        <p class="edu-institution">Facultad Regional Avellaneda</p>
+                        <p>Formación enfocada en el desarrollo de software, lógica de programación y resolución de problemas.</p>
+                    </div>
+                </div>
+
+                <!-- Mi camino en la tecnología -->
+                <div class="historia-camino">
+                    <h3>Mi camino en la tecnología</h3>
+                    <p>Aunque mi camino profesional comenzó hace algunos años, mi curiosidad por la tecnología empezó mucho antes. Todavía me acuerdo de cuando tenía alrededor de diez años e intenté hacer mi primera página web: decía "Hola mundo" y tenía la foto de un tigre. No era gran cosa, pero, sin saberlo, ya estaba dando mis primeros pasos.</p>
+                    <p>Sin embargo, cuando llegó el momento de elegir una carrera, tomé otro rumbo. Fue durante la pandemia, mientras cursaba esa carrera, cuando empecé a preguntarme si realmente era lo que quería para mi futuro. Como les pasó a muchas personas, ese tiempo me hizo replantearme muchas cosas.</p>
+                    <p>En ese contexto descubrí <strong>Argentina Programa</strong>, un curso que despertó algo que hacía tiempo no sentía: disfrutaba aprender, resolver problemas y crear. Me encontraba esperando el momento de sentarme a programar, y entendí que ese entusiasmo era una señal de que había encontrado mi lugar.</p>
+                    <p>Así fue como, en 2022, decidí empezar la <strong>Tecnicatura Universitaria en Programación</strong> en la Universidad Tecnológica Nacional (UTN) – Facultad Regional Avellaneda.</p>
+                    <p>No fue un camino sencillo. Venía de un secundario con orientación en Humanidades, por lo que muchas materias representaban un desafío completamente nuevo para mí. Hubo momentos de frustración, materias que costaron más que otras y el desafío de combinar el estudio con el trabajo. Pero, paradójicamente, mientras más me esforzaba, más convencida estaba de que había tomado la decisión correcta.</p>
+                    <p>A finales de 2025 obtuve mi título de Técnica Universitaria en Programación. Más allá del diploma, me llevé algo mucho más valioso: la certeza de haber encontrado una profesión que me desafía, me entusiasma y me impulsa a seguir aprendiendo todos los días.</p>
+                    <p>Durante ese recorrido desarrollé proyectos de todo tipo, aprendí nuevas herramientas y enfrenté desafíos que marcaron mi crecimiento. Muchos de esos proyectos forman parte de este portfolio y cuentan, mejor que cualquier descripción, cómo fui evolucionando a lo largo del camino.</p>
+                </div>
+
+            </div>
+
+            <!-- Sub-sección de Proyectos -->
+            <div class="proyectos-wrapper">
+                <h3 class="section-subtitle">Proyectos</h3>
+                <div class="container grid-3-cols">
+                    
+                    <article class="card-proyecto">
+                        <img src="images/proyecto-alien.jpg" alt="Alien Game">
+                        <div class="card-content">
+                            <h3>Alien Game</h3>
+                            <p>Un proyecto realizado en javascript sobre un gatito alienígena que juega mucho mucho mucho. Ya no se que mas poner.</p>
+                            <div class="tags">
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-proyecto">
+                        <img src="images/proyecto-alien.jpg" alt="Alien Game">
+                        <div class="card-content">
+                            <h3>Alien Game</h3>
+                            <p>Un proyecto realizado en javascript sobre un gatito alienígena que juega mucho mucho mucho. Ya no se que mas poner.</p>
+                            <div class="tags">
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-proyecto">
+                        <img src="images/proyecto-alien.jpg" alt="Alien Game">
+                        <div class="card-content">
+                            <h3>Alien Game</h3>
+                            <p>Un proyecto realizado en javascript sobre un gatito alienígena que juega mucho mucho mucho. Ya no se que mas poner.</p>
+                            <div class="tags">
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">JS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Sub-sección de Certificaciones (Carrusel) -->
+            <div class="certificaciones-wrapper">
+                <h3 class="section-subtitle">Certificaciones</h3>
+                <div class="container">
+                    <div class="carousel-certificaciones">
+                        
+                        <!-- 1. Automatización (La de mayor valor para tu perfil actual) -->
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="imagenes/automation.png" alt="Advanced Automation Professional - Automation Anywhere">
+                            </div>
+                            <h4>Automatización RPA</h4>
+                            <p>Advanced Developer (Automation Anywhere)</p>
+                        </div>
+
+                        <!-- 2. Data Analytics -->
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="imagenes/data-analytics.jpg" alt="Data Analytics con Python">
+                            </div>
+                            <h4>Data Analytics</h4>
+                            <p>Análisis de datos con Python</p>
+                        </div>
+
+                        <!-- 3. Scrum Grand Master -->
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="imagenes/scrum.png" alt="Scrum Grand Master - UTN">
+                            </div>
+                            <h4>Metodologías Ágiles</h4>
+                            <p>Scrum Grand Master (UTN)</p>
+                        </div>
+                        
+                        
+
+                        <!-- 4. Desarrollo Full Stack MERN -->
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="imagenes/mern.png" alt="Desarrollador Full Stack MERN">
+                            </div>
+                            <h4>Desarrollo Full Stack</h4>
+                            <p>MERN Stack (Skillnest / Forge)</p>
+                        </div>
+
+                        <!-- 5. Argentina Programa -->
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="imagenes/argentina-programa.jpg" alt="Argentina Programa 4.0">
+                            </div>
+                            <h4>#SeProgramar</h4>
+                            <p>Argentina Programa 4.0</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AUTOMATIZACIONES ================= -->
+        <section id="automatizaciones" class="section-automatizaciones">
+            <h2 class="section-title">Automatizaciones</h2>
+            <div class="container grid-2-cols">
+                
+                <article class="card-auto">
+                    <div class="auto-icon">🤖</div>
+                    <div class="auto-content">
+                        <h3>Robotic Process Automation (RPA)</h3>
+                        <p>Desarrollo e implementación de bots utilizando Automation Anywhere (A360) y Power Automate Desktop para optimizar tareas operativas.</p>
+                    </div>
+                </article>
+
+                <article class="card-auto">
+                    <div class="auto-icon">⚙️</div>
+                    <div class="auto-content">
+                        <h3>Integración de Flujos</h3>
+                        <p>Creación de flujos de trabajo automatizados y conexión entre diferentes servicios y APIs utilizando herramientas como n8n.</p>
+                    </div>
+                </article>
+
+            </div>
+            <div class="container grid-2-cols">
+                
+                <article class="card-auto">
+                    <div class="auto-icon">🤖</div>
+                    <div class="auto-content">
+                        <h3>Robotic Process Automation (RPA)</h3>
+                        <p>Desarrollo e implementación de bots utilizando Automation Anywhere (A360) y Power Automate Desktop para optimizar tareas operativas.</p>
+                    </div>
+                </article>
+
+                <article class="card-auto">
+                    <div class="auto-icon">⚙️</div>
+                    <div class="auto-content">
+                        <h3>Integración de Flujos</h3>
+                        <p>Creación de flujos de trabajo automatizados y conexión entre diferentes servicios y APIs utilizando herramientas como n8n.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= VOLUNTARIADO ================= -->
+        <section id="voluntariado" class="section-voluntariado">
+            <h2 class="section-title">Voluntariado</h2>
+            <div class="container">
+                
+                <div class="voluntariado-item">
+                    <div class="vol-image starburst">
+                        <img src="imagenes/club.jpg" alt="Google Logo">
+                    </div>
+                    <div class="vol-text">
+                        <p class="justificado">Tuve la oportunidad de ser parte de Chicas Programadoras como profe de Código Creativo y acompañar a un grupo de chicas entre 13 y 17 años en sus primeros pasos en el mundo de la programación.</p>
+                        <p class="justificado">Más allá de enseñar código, disfruté mucho poder incentivar su curiosidad, acompañarlas mientras aprendían y ver cómo, clase a clase, se animaban a crear, preguntar y experimentar.</p>
+                        <p class="justificado">Fue una experiencia muy linda que me recordó que compartir lo que uno sabe también es una forma de seguir aprendiendo. 💜 </p>
+                        <p class="justificado">Durante el curso trabajamos:</p>
                         <ul>
-                            <li>Soluciones de Automatización completadas.</li>
-                            <li>Implementación de soluciones y wwmantor automation.</li>
-                            <li>Automatización editorial implementada.</li>
-                            <li>Solutioners implementados con soluciones de automatización.</li>
+                            <li>💡 Nociones básicas de programación y pensamiento lógico.</li>
+                            <li>🎮 Scratch y Micro:bit, creando proyectos y experiencias interactivas.</li>
+                            <li>🌐 HTML, CSS y JavaScript para desarrollar páginas web.</li>
+                            <li>🐍 Python, incorporando conceptos fundamentales de programación.</li>
                         </ul>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- COLUMNA DERECHA (Barra Lateral de Automatización) -->
-        <aside class="right-column">
-            <section id="automatizacion" class="automation-sidebar">
-                <h2 class="section-headline headline-dark">AUTOMATIONS</h2>
-                <div class="automation-card">
-                    <div class="automation-header">
-                        <h3>Workflow Efficiency Tools</h3>
-                        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cellipse cx='50' cy='50' rx='40' ry='30' fill='%23ea76cb' fill-opacity='0.2'/%3E%3Ccircle cx='40' cy='45' r='5' fill='%23ea76cb'/%3E%3Ccircle cx='60' cy='45' r='5' fill='%23ea76cb'/%3E%3Cpath d='M 35 65 q 15 15 30 0' fill='none' stroke='%23ea76cb' stroke-width='3'/%3E%3Crect x='45' y='15' width='10' height='20' rx='2' fill='%23ea76cb'/%3E%3C/svg%3E" alt="Robot Icon" class="automation-icon">
+
+            </div>
+        </section>
+
+        <!-- =================  HOBBIES ================= -->
+        <section id="hobbies" class="section-hobbies">
+            <h2 class="section-title">Hobbies</h2>
+            <div class="container grid-3-cols polaroid-gallery">
+                
+                <div class="polaroid rotate-left">
+                    <img src="images/ceramica.jpg" alt="Cerámica by Lulu">
+                    <div class="polaroid-text">
+                        <h4>Cerámica</h4>
+                        <p>Taza de la suerte.</p>
                     </div>
-                    <ul>
-                        <li>Implementación de soluciones de automatización, optimizando flujos de trabajo.</li>
-                        <li>Implementación de soportes arril y servicios para prevenir fraudes.</li>
-                        <li>Automatización editorial implementada.</li>
-                        <li>Solutioners implementados con soluciones de automatización.</li>
-                    </ul>
                 </div>
-            </section>
-        </aside>
 
+                <div class="polaroid rotate-right">
+                    <img src="images/ceramica.jpg" alt="cianotipo">
+                    <div class="polaroid-text">
+                        <h4>cianotipo</h4>
+                        <p>Una descripción muy corta.</p>
+                    </div>
+                </div>
+
+                <div class="polaroid rotate-left-alt">
+                    <img src="images/ceramica.jpg" alt="algoo">
+                    <div class="polaroid-text">
+                        <h4>Algo</h4>
+                        <p>Una descripción muy corta.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="stars-decoration">
+                <span class="star">✦</span>
+                <span class="star big">✦</span>
+                <span class="star">✦</span>
+                <span class="star big">✦</span>
+                <span class="star">✦</span>
+            </div>
+        </section>
     </main>
 
-    <!-- SECCIÓN DE YOGA (Ancho Completo con Imagen de Fondo) -->
-    <section id="sobre-mi" class="yoga-section">
-        <div class="container yoga-container">
-            <div class="yoga-text-box">
-                <h2>YOGA & MINDFULNESS</h2>
-                <p>La práctica del Yoga informa mi núcleo de servicios profesionales, aportando un enfoque equilibrado y centrado en la atención plena a cada proyecto de desarrollo.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE GALERÍA DE ARTE -->
-    <section id="arte" class="container art-section">
-        <h2 class="section-headline headline-dark">ART GALLERY</h2>
-        <div class="art-grid">
-            <!-- SUSTITUYE ESTAS IMÁGENES POR TU ARTE -->
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+1" alt="Arte de Sarah 1" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+2" alt="Arte de Sarah 2" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+3" alt="Arte de Sarah 3" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+4" alt="Arte de Sarah 4" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+5" alt="Arte de Sarah 5" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+6" alt="Arte de Sarah 6" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+7" alt="Arte de Sarah 7" class="art-item">
-            <img src="https://via.placeholder.com/300x300/e6e9ef/4c4f69?text=Arte+8" alt="Arte de Sarah 8" class="art-item">
-        </div>
-    </section>
-
-    <!-- PIE DE PÁGINA -->
-    <footer id="contacto">
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
         <div class="container footer-container">
-            <p class="footer-logo">portafolio.morko</p>
-            <p class="contact-info">Contacto: 10: 123-6789 | sahaln@yggapomne.com</p>
-            <nav class="social-links">
-                <a href="#" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" target="_blank" title="Github"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
-            </nav>
+            <div class="footer-logo">Lucia Corbo</div>
+            
+
+            <div class="footer-credits">
+                <div class="emojis">🌸 🎨 ✨ 💻</div>
+                <p>hecho con 🤍 por Lucia</p>
+            </div>
         </div>
     </footer>
 
